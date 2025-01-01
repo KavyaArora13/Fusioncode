@@ -27,7 +27,7 @@ const VirtualConsultation = () => {
           </span>
           
           <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-light leading-[1.2] mb-[15px] md:mb-[20px] tracking-[-0.5px] text-[#333333]">
-            Virtual guidance from home's comfort
+            Virtual guidance from home&apos;s comfort
           </h2>
           
           <p className="text-[14px] md:text-[15px] lg:text-[16px] leading-[1.7] mb-[25px] md:mb-[30px] text-[#333333]">
