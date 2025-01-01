@@ -3,19 +3,74 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 252, 252, 252;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  background-color: #FFFEF2;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+.swiper-pagination {
+  position: static !important;
+  width: auto !important;
+  color: #333 !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: static !important;
+  margin: 0 !important;
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none !important;
+}
+
+.swiper-pagination-fraction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.swiper-slide {
+  opacity: 1 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+
+/* Hide default Swiper navigation arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+/* Custom navigation styles */
+.custom-swiper-prev,
+.custom-swiper-next {
+  opacity: 1;
+  visibility: visible;
+}
+
+.custom-swiper-prev.swiper-button-disabled,
+.custom-swiper-next.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
